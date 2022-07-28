@@ -1,12 +1,35 @@
 package com.sc.rpg.model;
 
+import java.time.LocalDate;
+
 public class Customer {
 	
 	private int id;
 	private String name,email,accountType;
 	private long contact;
+	private LocalDate accountCreationDate;
 	
 	
+	public LocalDate getAccountCreationDate() {
+		return accountCreationDate;
+	}
+
+
+	public void setAccountCreationDate(LocalDate accountCreationDate) {
+		this.accountCreationDate = accountCreationDate;
+	}
+
+
+	public Customer(String name, String email, String accountType, long contact, LocalDate accountCreationDate) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.accountType = accountType;
+		this.contact = contact;
+		this.accountCreationDate = accountCreationDate;
+	}
+
+
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -75,7 +98,7 @@ public class Customer {
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", name=" + name + ", email=" + email + ", accountType=" + accountType
-				+ ", contact=" + contact + "]";
+				+ ", contact=" + contact + ", accountCreationDate=" + accountCreationDate + "]";
 	}
 	
 	
